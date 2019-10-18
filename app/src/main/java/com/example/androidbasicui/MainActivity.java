@@ -2,6 +2,7 @@ package com.example.androidbasicui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -50,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
         submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                output.setText("");
+                StringBuilder output=new StringBuilder();
                 output.append("First name : "+first_name.getText().toString()+"\n");
                 output.append("Last name : "+last_name.getText().toString()+"\n");
                 output.append("Email : "+email.getText().toString()+"\n");
@@ -85,6 +86,14 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     output.append("Want Notification : No");
                 }
+
+                Intent intent=new Intent(MainActivity.this,OutPutActivity.class);
+                // Now let's Pass data using Bundle
+                Bundle bundle=new Bundle();
+                bundle.putString("output_data",output.toString());
+                intent.putExtras(bundle);
+                //intent.putExtra("output_data",output.toString());
+                startActivity(intent);
 
             }
         });
