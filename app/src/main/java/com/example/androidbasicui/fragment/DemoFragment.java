@@ -11,14 +11,18 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.androidbasicui.R;
+import com.example.androidbasicui.interfaces.PassDataInterface;
 
 
 public class DemoFragment extends Fragment {
 
-    public DemoFragment() {
+    PassDataInterface passDataInterface;
+    public DemoFragment(PassDataInterface passDataInterface) {
+        this.passDataInterface=passDataInterface;
         // Required empty public constructor
     }
 
@@ -37,6 +41,14 @@ public class DemoFragment extends Fragment {
         Bundle bundle=getArguments();
         String data=bundle.getString("output_data_fragment");
         output.setText(data);
+
+        final Button pass_data=view.findViewById(R.id.pass_data);
+        pass_data.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                passDataInterface.onDataReceived("Demo Data Sending By Fragment\n");
+            }
+        });
 
     }
 }

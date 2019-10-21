@@ -10,8 +10,13 @@
     android:id="@+id/output"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"/>
-   <RelativeLayout
+   <TextView
        android:layout_below="@id/output"
+       android:id="@+id/pass_data_receive"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"/>
+   <RelativeLayout
+       android:layout_below="@id/pass_data_receive"
        android:id="@+id/container_fragment"
        android:layout_width="match_parent"
        android:layout_height="wrap_content"/>
