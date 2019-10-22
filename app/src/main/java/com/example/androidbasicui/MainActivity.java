@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup sex;
     Switch want_notification;
     TextView output;
+    Button progres_ui;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,12 +41,20 @@ public class MainActivity extends AppCompatActivity {
         java=findViewById(R.id.java);
         csharp=findViewById(R.id.csharp);
         sex=findViewById(R.id.sex);
+        progres_ui=findViewById(R.id.progress_ui);
         want_notification=findViewById(R.id.notification);
         submit=findViewById(R.id.submit);
 
         String[] age_list={"10","11","12","13","14","15","16","17","18"};
         ArrayAdapter adapter=new ArrayAdapter(MainActivity.this,android.R.layout.simple_list_item_1,age_list);
         age.setAdapter(adapter);
+
+        progres_ui.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,Progress_Seekbar_Activity.class));
+            }
+        });
 
 
         submit.setOnClickListener(new View.OnClickListener() {
