@@ -168,6 +168,14 @@
                 android:id="@+id/progress_ui"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
+            <Button
+                android:textColor="#fff"
+                android:background="#FF3434"
+                android:text="Shareprefence Demo"
+                android:id="@+id/sharepref"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         <TextView
             android:padding="10dp"
             android:layout_marginTop="10dp"

@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     Switch want_notification;
     TextView output;
     Button progres_ui;
+    Button sharepref;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
         progres_ui=findViewById(R.id.progress_ui);
         want_notification=findViewById(R.id.notification);
         submit=findViewById(R.id.submit);
+        sharepref=findViewById(R.id.sharepref);
+
 
         String[] age_list={"10","11","12","13","14","15","16","17","18"};
         ArrayAdapter adapter=new ArrayAdapter(MainActivity.this,android.R.layout.simple_list_item_1,age_list);
@@ -107,6 +110,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        sharepref.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,SharePrefenceDemo.class));
+            }
+        });
 
 
     }
