@@ -176,6 +176,15 @@
                 android:id="@+id/sharepref"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
+
+            <Button
+                android:textColor="#fff"
+                android:background="#07CAAF"
+                android:layout_marginTop="10dp"
+                android:text="Alert Dialog Demo"
+                android:id="@+id/alertdiag"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
         <TextView
             android:padding="10dp"
             android:layout_marginTop="10dp"

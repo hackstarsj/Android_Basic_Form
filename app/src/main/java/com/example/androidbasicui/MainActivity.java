@@ -26,6 +26,7 @@ public class MainActivity extends AppCompatActivity {
     TextView output;
     Button progres_ui;
     Button sharepref;
+    Button alertdiag;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         want_notification=findViewById(R.id.notification);
         submit=findViewById(R.id.submit);
         sharepref=findViewById(R.id.sharepref);
+        alertdiag=findViewById(R.id.alertdiag);
 
 
         String[] age_list={"10","11","12","13","14","15","16","17","18"};
@@ -117,6 +119,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        alertdiag.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(MainActivity.this,AlertDialogDemoActivity.class));
+            }
+        });
 
     }
 }

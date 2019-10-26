@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SharePrefenceDemo"></activity>
+        <activity android:name=".AlertDialogDemoActivity"></activity>
+        <activity android:name=".SharePrefenceDemo" />
         <activity android:name=".Progress_Seekbar_Activity" />
         <activity android:name=".OutPutActivity" />
         <activity android:name=".MainActivity">
